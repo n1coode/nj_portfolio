@@ -1,0 +1,37 @@
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:if condition="{noMenu}">
+	<f:then><f:comment>DO NOTHING</f:comment></f:then>
+	<f:else>
+		<f:if condition="{categories}">
+			<f:then>
+				<div class="selection" data-selection="categories">
+					<ul>
+						<f:for each="{categories}" as="item" iteration="categoryIterator">
+							<li id="tx_njportfolio-menuitem-{categoryIterator.index}" class="gs1of{category -> f:count()} {f:if(condition:'{item.uid}=={activeCategory}',then:'active',else:'inactive')}" data-category="{item.uid}">
+								<f:if condition="{item.iconInclude}">
+									<f:then>
+										<div class="icon"><f:format.raw>{item.icon}</f:format.raw></div>
+										<span data-hover="{item.title}"><f:link.action action="list" controller="Portfolio" arguments="{category:item}"><f:if condition="{settings.showNumbers}"><f:menuNumber iterator="{categoryIterator.index}" /> </f:if>{item.title}</f:link.action></span>
+									</f:then>
+									<f:else>
+										<f:link.action action="list" controller="Portfolio" arguments="{category:item}"><f:if condition="{settings.showNumbers}"><f:menuNumber iterator="{categoryIterator.index}" /> </f:if>{item.title}</f:link.action>
+									</f:else>
+								</f:if>	
+							</li>
+						</f:for> 
+					</ul>
+				</div>
+			</f:then>
+			<f:else>
+				No categories found.
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>
+<f:if condition="{works}">
+	<f:then>
+		<f:render partial="Works" arguments="{_all}" />
+	</f:then>
+	<f:else></f:else>
+</f:if>

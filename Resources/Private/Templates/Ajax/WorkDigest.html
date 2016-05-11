@@ -1,0 +1,10 @@
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:if condition="{render}">
+	<f:then>
+		<f:render partial="Work/{render}" arguments="{_all}" />
+	</f:then>
+	<f:else>
+		No render type called.
+	</f:else>
+</f:if>

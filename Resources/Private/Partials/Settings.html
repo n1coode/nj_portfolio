@@ -1,0 +1,18 @@
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:if condition="{ext}">
+	<script type="text/javascript" name="test">
+		var {ext.name}_{ext.domain}_{ext.action}_settings = [];
+		<f:for each="{ext}" as="value" key="key">
+			<f:is object="{value}" type="array">
+				<f:then>
+					{ext.name}_{ext.domain}_{ext.action}_settings['{key}']['{secondKey}'] = [];
+					<f:for each="{secondValue}" as="thirdValue" key="thirdKey">
+						{ext.name}_{ext.domain}_{ext.action}_settings['{key}']['{secondKey}']['{thirdKey}'] = '{thirdValue}';
+					</f:for>
+				</f:then>
+				<f:else>{ext.name}_{ext.domain}_{ext.action}_settings['{key}'] = '{value}';</f:else>
+			</f:is>
+		</f:for>
+	</script>
+</f:if>

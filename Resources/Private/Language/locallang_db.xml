@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'nj_portfolio'.</description>
+	</meta> 
+	<data type="array"> 
+		<languageKey index="default" type="array">
+			<label index="tab.additionalInformation">Additional information</label>
+			<label index="tab.categorization">Categorization</label>
+			<label index="tab.description">Description</label>
+			<label index="tab.generalSettings">General settings</label>
+			<label index="tab.generalInformation">General information</label>
+			<label index="tab.images">Images</label>
+			<label index="tab.logo">Logo</label>
+			<label index="tab.scanCode">Scan Code</label>
+			<label index="tab.work">Work</label>
+			<label index="general.icon.title.category.add">Add a new category</label>
+			<label index="general.icon.title.category.edit">Edit the selected category</label>
+			<label index="general.icon.title.prodtype.add">Add a new product type</label>
+			<label index="general.icon.title.prodtype.edit">Edit the selected product type</label>
+			<label index="general.icon.title.client.add">Add a new client</label>
+			<label index="general.icon.title.client.edit">Edit the selected client</label>
+			<label index="general.conclusion">Conclusion:</label>
+			<label index="general.date">Creation date:</label>
+			<label index="general.description">Description:</label>
+			<label index="general.email">E-Mail:</label>
+			<label index="general.intro">Introduction:</label>
+			<label index="general.name">Name:</label>
+			<label index="general.title">Title:</label>
+			<label index="general.website">Webseite:</label>
+			<label index="portfolio">Portfolio</label>
+			<label index="portfolio.category">Category:</label>
+			<label index="portfolio.work">Work:</label>
+			<label index="portfolio.client">Client:</label>
+			<label index="work">Work</label>
+			<label index="work.prodtype">Product type:</label>
+			<label index="work.images">Images:</label>
+			<label index="category">Category</label>		
+			<label index="client">Client</label>
+			<label index="client.logo">Logo:</label>
+			<label index="client.scanCode">Scan code:</label>
+			<label index="client.street">Street:</label>
+			<label index="client.trade">Trade:</label>
+			<label index="client.city">City:</label>
+			<label index="client.zipCode">Zip Code:</label>
+			<label index="client.country">Country:</label>
+			<label index="prodtype">Product type</label>
+			<label index="option.general.no">Nein</label>
+			<label index="option.general.yes">Ja</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tab.additionalInformation">Zusätzliche Angaben</label>
+			<label index="tab.categorization">Kategorisierung</label>
+			<label index="tab.description">Beschreibung</label>
+			<label index="tab.generalInformation">Allgemeine Informationen</label>
+			<label index="tab.generalSettings">Generelle Einstellungen</label>
+			<label index="tab.images">Bilddateien</label>
+			<label index="tab.logo">Logo</label>
+			<label index="tab.scanCode">QR-Code</label>
+			<label index="tab.work">Arbeiten</label>
+			<label index="flexform.mode.portfolio.list">Arbeiten &#171; Liste &#187;</label>
+			<label index="general.icon.title.category.add">Neue Kategorie hinzufügen</label>
+			<label index="general.icon.title.category.edit">Ausgewählte Kategorie bearbeiten</label>
+			<label index="general.icon.title.prodtype.add">Neuen Produkt-Typ hinzufügen</label>
+			<label index="general.icon.title.prodtype.edit">Ausgewählten Produkt-Typ bearbeiten</label>
+			<label index="general.icon.title.client.add">Neuen Klienten hinzufügen</label>
+			<label index="general.icon.title.client.edit">Ausgewählten Klienten bearbeiten</label>
+			<label index="label.category">Kategorie:</label>
+			<label index="label.city">Stadt:</label>
+			<label index="label.client">Klient:</label>
+			<label index="label.conclusion">Abschluss:</label>
+			<label index="label.country">Land:</label>
+			<label index="label.date">Erstellungsdatum:</label>
+			<label index="label.intro">Einleitung:</label>
+			<label index="label.description">Beschreibung:</label>
+			<label index="label.email">E-Mail:</label>
+			<label index="label.images">Bilder:</label>
+			<label index="label.logo">Logo:</label>
+			<label index="label.name">Name:</label>
+			<label index="label.persistence.storagePid">System-Ordner mit den Datensätzen:</label>
+			<label index="label.plugin.mode">Modus:</label>
+			<label index="label.product">Produkt:</label>
+			<label index="label.scanCode">QR-Code:</label>
+			<label index="label.showDescription">Beschreibung anzeigen</label>
+			<label index="label.street">Straße:</label>
+			<label index="label.title">Titel:</label>
+			<label index="label.trade">Branche:</label>
+			<label index="label.useTypoScriptSettings">TypoScript-Einstellungen verwenden:</label>
+			<label index="label.website">Webseite:</label>
+			<label index="label.work">Arbeiten:</label>
+			<label index="label.zipCode">Postleitzahl:</label>
+			<label index="model.category">Kategorie</label>
+			<label index="model.client">Klient</label>
+			<label index="model.material">Material</label>
+			<label index="model.portfolio">Arbeitsmappe</label>
+			<label index="model.product">Produkt</label>
+			<label index="model.trade">Branche</label>
+			<label index="model.work">Arbeit</label>
+			<label index="option.general.no">Nein</label>
+			<label index="option.general.yes">Ja</label>
+		</languageKey>
+	</data>
+</T3locallang>

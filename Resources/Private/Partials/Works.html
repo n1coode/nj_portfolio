@@ -1,0 +1,33 @@
+{namespace f=N1coode\NjCollection\ViewHelpers}
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+
+<f:if condition="{render}">
+	<f:then>
+		<f:render section="{render}" arguments="{_all}" />
+	</f:then>
+	<f:else>
+		Error: no renderType submitted.
+	</f:else>
+</f:if>
+
+
+<f:section name="Categories">
+	<div class="works" data-category="{activeCategory}">
+		<f:render section="masonry" arguments="{_all}" />
+	</div>
+</f:section>
+
+<f:section name="Clients">
+	<div class="works">
+		<f:render section="masonry" arguments="{_all}" />
+	</div>
+</f:section>
+
+<f:section name="masonry">
+	<div class="masonry grid">
+		<div class="grid-sizer"></div>
+		<f:for each="{works}" as="work" iteration="iterator">
+			<f:render partial="Work/Item" arguments="{_all}" />
+		</f:for>
+	</div>
+</f:section>

@@ -1,0 +1,32 @@
+{namespace njportVH=N1coode\NjPortfolio\ViewHelpers}
+<div id="tx_njportfolio" class="tx_njportfolio list">
+	<div class="results">
+		<f:if condition="{portfolio}">
+			<f:then>
+				<f:for each="{portfolio}" as="item" iteration="portfolioIterator">
+					<f:alias map="{navNeeded: '{njportVH:navNeeded(work:item)}'}">
+						<div id="tx_njportfolio-listitem-{portfolioIterator.index}" class="tx_njportfolio-listitem {f:if(condition:'{portfolioIterator.isOdd}',then:'odd',else:'even')}" onClick="tx_njportfolio_showWork({pid}, {portfolioIterator.index}, {item.uid}, {category.uid}, {item.uid}, {item.uid}, {closeUpWidth}, {closeUpHeight}, {navNeeded});" style="width:{thumb.width}px; height:{thumb.height}px;" >
+							<f:for each="{item.images}" as="image" iteration="imageIterator">
+								<f:if condition="{imageIterator.index}==0">
+									<f:if condition="{thumb.showTitles}">
+										<div class="title">
+											<f:for each="{item.client}" as="client">
+												<h1>{client.name}</h1>
+											</f:for>
+											{item.title}
+										</div>
+										<div class="thumbnail">
+											<f:image src="{image.uid}" alt="" width="{thumb.width}c" height="{thumb.height}c" treatIdAsReference="1"/>
+										</div>
+									</f:if>
+								</f:if>
+							</f:for>
+						</div>
+					</f:alias>
+				</f:for>
+			</f:then>
+			<f:else>
+			</f:else>
+		</f:if>
+	</div>
+</div>

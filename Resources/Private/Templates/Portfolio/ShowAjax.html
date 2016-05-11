@@ -1,0 +1,24 @@
+{namespace njportVH=N1coode\NjPortfolio\ViewHelpers}
+<f:if condition="{work}">
+	<f:then>
+		<f:if condition="{work.images -> f:count()} > 1">
+			<div actpic="0" class="next" style="width: 52px; height: 52px; background:url('typo3conf/ext/nj_portfolio/Resources/Public/Gfx/arrow_next.png') 0 0 no-repeat;"></div>
+			<div actpic="0" class="prev" style="width: 52px; height: 52px; background:url('typo3conf/ext/nj_portfolio/Resources/Public/Gfx/arrow_prev.png') 0 0 no-repeat; display:none;"></div>
+		</f:if>
+		<div class="imgContainer" style="width:{closeUpWidth}px; height:{closeUpHeight}px;">
+			<f:for each="{work.images}" as="image" iteration="imageIterator">
+				<div id="spotlight-image-{imageIterator.index}" class="spotlight-image" {f:if(condition:'{imageIterator.index}>0',then:' style="display:none;"',else:'')}>
+					<f:image src="{image.uid}" alt="" width="{closeUpWidth}" height="{closeUpHeight}" treatIdAsReference="1"/> 
+				</div>
+			</f:for>
+		</div>
+		<div class="headlineWrapper">
+			<div class="headline" style="display:none; background: url('typo3conf/ext/nj_portfolio/Resources/Public/Gfx/logo.png') no-repeat 0 0;">
+				<f:for each="{work.client}" as="client">
+					<h1>{client.name}</h1>
+				</f:for>
+				{work.title}
+			</div>
+		</div>
+	</f:then>
+</f:if>

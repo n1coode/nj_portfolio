@@ -1,0 +1,149 @@
+# Plugin configuration
+plugin.tx_njportfolio {
+ 	settings {
+ 		general {
+			imageFolder = {$plugin.tx_njportfolio.settings.general.imageFolder}
+			includeJQuery = {$plugin.tx_njportfolio.settings.general.includeJQuery}
+			pageId = {$plugin.tx_njportfolio.settings.general.pageId}
+			ajax {
+                typeNum = 651767836546
+            }
+		}
+ 		model {
+			portfolio {
+				storagePid = {$plugin.tx_njportfolio.settings.model.portfolio.storagePid}
+				includeCss = {$plugin.tx_njportfolio.settings.model.portfolio.includeCss}
+				cssFile = {$plugin.tx_njportfolio.settings.model.portfolio.cssFile}
+				closeUpWidth = {$plugin.tx_njportfolio.settings.model.portfolio.closeUpWidth}
+				closeUpHeight = {$plugin.tx_njportfolio.settings.model.portfolio.closeUpHeight}
+				showHeadlines = {$plugin.tx_njportfolio.settings.model.portfolio.showHeadlines}
+				showThumbTitles = {$plugin.tx_njportfolio.settings.model.portfolio.showThumbTitles}
+				thumbWidth = {$plugin.tx_njportfolio.settings.model.portfolio.thumbWidth}
+				thumbHeight = {$plugin.tx_njportfolio.settings.model.portfolio.thumbHeight}
+				thumbDistance = {$plugin.tx_njportfolio.settings.model.portfolio.thumbDistance}
+			}
+			work {
+				storagePid = {$plugin.tx_njportfolio.settings.model.work.storagePid}
+				includeCss = {$plugin.tx_njportfolio.settings.model.work.includeCss}
+				cssFile = {$plugin.tx_njportfolio.settings.model.work.cssFile}
+				digest {
+					cols = {$plugin.tx_njportfolio.settings.model.work.digest.cols}
+					img {
+						height {
+							fixed = {$plugin.tx_njportfolio.settings.model.work.digest.img.height.fixed}
+						}
+					}
+					
+					selection {
+						start = {$plugin.tx_njportfolio.settings.model.work.digest.selection.start}
+						items = categories,clients,products,trades
+					}
+				}
+				pid {
+					client = {$plugin.tx_njportfolio.settings.model.work.pid.client}
+					focus = {$plugin.tx_njportfolio.settings.model.work.pid.focus}
+					list = {$plugin.tx_njportfolio.settings.model.work.pid.list}
+				}
+				
+			}
+			category {
+				storagePid = {$plugin.tx_njportfolio.settings.model.category.storagePid}
+				includeCss = {$plugin.tx_njportfolio.settings.model.category.includeCss}
+				cssFile = {$plugin.tx_njportfolio.settings.model.category.cssFile}
+				showNumbers = {$plugin.tx_njportfolio.settings.model.category.showNumbers}
+			}
+		}
+	}
+
+	persistence {
+		storagePid = {$plugin.tx_njportfolio.persistence.storagePid}
+		classes {
+		}
+	}
+
+	view {
+		templateRootPath = {$plugin.tx_njportfolio.view.templateRootPath}
+		partialRootPaths {
+			100 = {$plugin.tx_njportfolio.view.partialRootPath}
+			200 = EXT:nj_collection/Resources/Private/Partials/
+		}
+		layoutRootPath = {$plugin.tx_njportfolio.view.layoutRootPath}
+	}
+}
+
+config.tx_extbase {
+	persistence {
+		classes {
+		}
+	}
+}
+
+lib.njportfolio_imagefolder = COA
+lib.njportfolio_imagefolder {
+	10 = TEXT
+	10 {
+		value = {$plugin.tx_njportfolio.settings.general.imageFolder}
+	}
+}
+
+#
+# AJAX Page Prototype
+# typeNum: nj_portfolio -> handykeyboard -> 651767836546
+#
+lib.AJAXPrototype= PAGE
+lib.AJAXPrototype {
+	typeNum = 651767836546
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = 0
+		admPanel = 0
+		debug = 0
+		no_cache = 1
+		additionalHeaders = Content-type:application/json
+	}
+}
+ 
+ 
+#
+# my AjaxType 
+#
+AJAX_njportfolio < lib.AJAXPrototype
+AJAX_njportfolio {
+	typeNum = 651767836546
+	 
+	10 = USER
+	10 {
+		userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+		vendorName = N1coode
+		extensionName = NjPortfolio
+		pluginName = Pi1
+		settings =< plugin.tx_njportfolio.settings
+    	persistence =< plugin.tx_njportfolio.persistence
+    	view =< plugin.tx_njportfolio.view
+		switchableControllerActions {
+            Ajax {
+				1 = workDigest
+                2 = workImage
+            }
+        }
+	}
+}
+
+
+lib.tx_njportfolio.category.menu = USER
+lib.tx_njportfolio.category.menu {
+    userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+	action = list
+	controller = Category
+	extensionName = NjPortfolio
+	pluginName = Pi1
+    vendorName = N1coode
+    settings =< plugin.tx_njportfolio.settings
+    persistence =< plugin.tx_njportfolio.persistence
+    view =< plugin.tx_njportfolio.view
+	switchableControllerActions {
+        Category {
+            1 = list
+        }
+    }
+}

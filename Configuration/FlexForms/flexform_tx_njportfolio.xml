@@ -1,0 +1,251 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:tab.generalSettings</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.flexform.general.typoScript>
+                        <TCEforms>
+                            <onChange>reload</onChange>
+                            <label>LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:label.general.typoScript</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:option.general.no</numIndex>
+                                        <numIndex index="1">0</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:option.general.yes</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </settings.flexform.general.typoScript>
+
+                    <!-- View -->
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:flexform.selection.controller.action</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <items>
+									<numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.header.index</numIndex>
+                                        <numIndex index="1">Header->index</numIndex>
+                                    </numIndex>
+									<numIndex index="11">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.category.list</numIndex>
+                                        <numIndex index="1">Category->list;Ajax->digest</numIndex>
+                                    </numIndex>
+									<numIndex index="12">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.category.menu</numIndex>
+                                        <numIndex index="1">Category->menu</numIndex>
+                                    </numIndex>
+									<numIndex index="21">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.work.digest</numIndex>
+                                        <numIndex index="1">Work->digest;Ajax->workImage</numIndex>
+                                    </numIndex>
+									<numIndex index="22">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.work.focusClient</numIndex>
+                                        <numIndex index="1">Work->focusClient</numIndex>
+                                    </numIndex>
+									 <numIndex index="23">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.work.highlights</numIndex>
+                                        <numIndex index="1">Work->highlights;Ajax->workImage</numIndex>
+                                    </numIndex>
+                                    <numIndex index="24">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.work.list</numIndex>
+                                        <numIndex index="1">Work->list</numIndex>
+                                    </numIndex>
+									<numIndex index="25">
+                                        <numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.work.selection</numIndex>
+                                        <numIndex index="1">Work->selection</numIndex>
+                                    </numIndex>
+                                </items> 
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+					<!-- PID -->
+					<settings.flexform.model.portfolio.focusPid>
+						<TCEforms> 
+							<label>Seiten-ID fuer die Einzelansicht der Arbeiten:</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+						</TCEforms>
+					</settings.flexform.model.portfolio.focusPid>
+                </el>
+            </ROOT>
+        </sDEF>
+		
+		<sPIDS>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.tab.pageIds</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.model.work.pid.client>
+						<TCEforms> 
+							<label>Seiten-ID mit der Focus-CLient-Ansicht:</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+						</TCEforms>
+					</settings.flexform.settings.model.work.pid.client>
+
+					<settings.flexform.settings.model.work.pid.focus>
+						<TCEforms> 
+							<label>Seiten-ID mit der Focus-Ansicht:</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+						</TCEforms>
+					</settings.flexform.settings.model.work.pid.focus>
+					<settings.flexform.settings.model.work.pid.list>
+						<TCEforms> 
+							<label>Seiten-ID mit der Focus-Ansicht:</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+						</TCEforms>
+					</settings.flexform.settings.model.work.pid.list>
+				</el>
+			</ROOT>
+		</sPIDS>
+		
+		<sCONTROLLER_HEADER_ACTION_INDEX>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.header.index</sheetTitle>
+					<displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Header->index]]></displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.model.header.index.version>
+						<TCEforms>
+							<label>LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:label.general.version</label>
+							<config>
+  								<type>radio</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:label.model.header.version.cityLife</numIndex>
+										<numIndex index="1">cityLife</numIndex>
+									</numIndex>
+								</items>
+								<default>standard</default>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>	
+					</settings.flexform.settings.model.header.index.version>
+				</el>
+			</ROOT>
+		</sCONTROLLER_HEADER_ACTION_INDEX>
+		<sCONTROLLER_CATEGORY_ACTION_MENU>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.category.menu</sheetTitle>
+					<displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Category->menu]]></displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.model.category.menu.version>
+						<TCEforms>
+							<label>LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:label.general.version</label>
+							<config>
+  								<type>radio</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:select.general.version.horizontal</numIndex>
+										<numIndex index="1">horizontal</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:select.general.version.vertical</numIndex>
+										<numIndex index="1">vertical</numIndex>
+									</numIndex>
+								</items>
+								<default>horizontal</default>
+								<maxitems>1</maxitems>
+							</config>
+						</TCEforms>	
+					</settings.flexform.settings.model.category.menu.version>
+				</el>
+			</ROOT>
+		</sCONTROLLER_CATEGORY_ACTION_MENU>
+		<sCONTROLLER_WORK_ACTION_DIGEST>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:flexform.controller.work.digest</sheetTitle>
+					<displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Work->digest;Ajax->workImage]]></displayCond>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.flexform.settings.model.work.digest.category.default>
+						<TCEforms> 
+							<label>Standard Kategorie:</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_njportfolio_domain_model_category</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>	
+						</TCEforms>
+					</settings.flexform.settings.model.work.digest.category.default>
+					<settings.flexform.settings.model.work.digest.img.height.fixed>
+						<TCEforms> 
+							<label>LLL:EXT:nj_portfolio/Resources/Private/Language/locallang_db.xlf:label.model.work.digest.img.height.fixed</label>
+							<config>
+								<type>radio</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:option.general.no</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:nj_collection/Resources/Private/Language/locallang_db.xlf:option.general.yes</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+								<default>1</default>
+								<maxitems>1</maxitems>
+							</config>	
+						</TCEforms>
+					</settings.flexform.settings.model.work.digest.img.height.fixed>
+				</el>
+			</ROOT>
+		</sCONTROLLER_WORK_ACTION_DIGEST>
+	</sheets>
+</T3DataStructure>

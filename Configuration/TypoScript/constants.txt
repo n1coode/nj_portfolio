@@ -1,0 +1,100 @@
+plugin.tx_njportfolio {
+	settings {
+		general {
+			# cat=plugin.tx_njportfolio//a; type=string; label=Image folder
+			imageFolder =
+			# cat=plugin.tx_njportfolio//a; type=boolean; label=Option Include jQuery-Library
+			includeJQuery = 1
+			# cat=plugin.tx_njportfolio//a; type=int+; label=Page ID the plugin is included
+			pageId = 
+		}
+	
+		model {
+			portfolio {
+				# cat=plugin.tx_njportfolio//a; type=int+; label=storage PID for the Portfolio-Model
+				storagePid =
+				
+				# cat=plugin.tx_njportfolio//a; type=boolean; label=Option Include Css-File for the Portfolio-Model
+				includeCss = 1
+				 
+				# cat=plugin.tx_njportfolio//a; type=string; label=Css-File for the Portfolio-Model
+				cssFile = 
+				
+				# cat=plugin.tx_njportfolio//a; type=int+; label=Width of the closeup picture
+				closeUpWidth = 
+				
+				# cat=plugin.tx_njportfolio//a; type=int+; label=Height of the closeup picture
+				closeUpHeight = 
+				# cat=plugin.tx_njportfolio//a; type=boolean; label=Option show headlines of portfolios
+				showHeadlines = 0
+				# cat=plugin.tx_njportfolio//a; type=boolean; label=Option show titles over thumbnails
+				showThumbTitles = 1
+				# cat=plugin.tx_njportfolio//a; type=int+; label=Width of a thumbnail
+				thumbWidth = 175 
+				# cat=plugin.tx_njportfolio//a; type=int+; label=Height of a thumbnail
+				thumbHeight = 175
+				# cat=plugin.tx_njportfolio//a; type=int+; label=Span between thumbnails
+				thumbDistance = 9
+			}
+			work {
+				# cat=plugin.tx_njportfolio//a; type=int+; label=storage PID for the Work-Model
+				storagePid =
+				
+				# cat=plugin.tx_njportfolio//a; type=boolean; label=Option Include Css-File for the Work-Model
+				includeCss = 1
+				 
+				# cat=plugin.tx_njportfolio//a; type=string; label=Css-File for the Work-Model
+				cssFile = 
+				digest {
+					# cat=plugin.tx_njportfolio//a; type=int+; label=Number of cols in digest
+					cols =
+					img {
+						height {
+							# cat=plugin.tx_njportfolio//a; type=boolean; label=Should all images have the same height?
+							fixed = 1
+						}
+					}
+					selection {
+						# cat=plugin.tx_njportfolio//a; type=string; label=Which items should be shown first
+						start = clients
+					}
+				}
+				pid {
+					# cat=plugin.tx_njportfolio/links/10; type=int+; label=pid client
+					client = 
+					# cat=plugin.tx_njportfolio/links/20; type=int+; label=pid focus
+					focus = 
+					# cat=plugin.tx_njportfolio/links/30; type=int+; label=pid list
+					list = 
+				}
+			}
+			category {
+				# cat=plugin.tx_njportfolio//a; type=int+; label=storage PID for the Category-Model
+				storagePid =
+				
+				# cat=plugin.tx_njportfolio//a; type=boolean; label=Option Include Css-File for the Category-Model
+				includeCss = 1
+				 
+				# cat=plugin.tx_njportfolio//a; type=string; label=Css-File for the Category-Model
+				cssFile = 
+				
+				# cat=plugin.tx_njportfolio//a; type=boolean; label=Option numbering the categorys in menu
+				showNumbers = 0
+			}
+		}
+	}
+	
+	persistence {
+		# cat=plugin.tx_njportfolio//a; type=int+; label=Default storage PID
+		storagePid =
+	}
+
+	view {
+        # cat=plugin.tx_njportfolio_view/file/10; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:nj_portfolio/Resources/Private/Templates/
+        # cat=plugin.tx_njportfolio_view/file/20; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:nj_portfolio/Resources/Private/Partials/
+        # cat=plugin.tx_njportfolio_view/file/30; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:nj_portfolio/Resources/Private/Layouts/
+    }	
+}

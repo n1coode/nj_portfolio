@@ -1,0 +1,34 @@
+{namespace njVH=N1coode\NjPortfolio\ViewHelpers}
+<f:render partial="Filter" />
+<div id="tx_portfolio_work_list" class="tx_njportfolio work list clearfix">
+	<f:if condition="{works}">
+		<f:for each="{works}" as="work" iteration="workIterator">
+			<div class="item inactive">
+				<div class="controls">
+					<div class="info">
+						<div class="cell">
+							<h2><f:format.raw>{work.client.name}</f:format.raw></h2>
+						</div>
+					</div>
+					<div class="icons">
+						<div class="cell">
+							<div class="focus"><f:link.action pageUid="13" controller="Work" action="focusClient"  arguments="{client : '{work.client}'}"><i class="fa fa-link"></i></f:link.action></div>
+							<div class="gallery"><i class="fa fa-image"></i></div>
+						</div>
+					</div>
+				</div>
+				<div class="thumbnail"><f:image src="{work.image.uid}" treatIdAsReference="1" alt="" width="500c" height="300c" /></div>	
+			</div>
+		</f:for>
+	</f:if>
+</div>
+
+
+<f:for each="{work.images}" as="image"> 	
+
+<a href="{f:uri.image(src:image.uid,treatIdAsReference:1)}" class="lightbox" rel="gallery"> 		
+
+	<f:image src="{image.uid}" alt="" width='67c' height="67c" treatIdAsReference="1"/> 	
+
+	</a > 
+</f:for>

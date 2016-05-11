@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the extension 'nj_portfolio'.</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_njportfolio.pluign.title">njs Portfolio Management</label>
+			<label index="message.headline.index">Overview</label>
+			<label index="message.headline.create">Write message</label>
+			<label index="message.headline.show">Read message</label>
+			<label index="message.headline.inbox">Inbox</label>
+			<label index="message.writeMessage">Write message</label>
+			<label index="message.inbox">Inbox</label>
+			<label index="message.outbox">Sent</label>
+			<label index="message.archive">Archive</label>
+			<label index="message.show.label.from">From</label>
+			<label index="message.show.label.sent">Sent</label>
+			<label index="message.show.label.subject">Subject</label>
+			<label index="message.general.button.reply">Reply</label>
+			<label index="message.general.button.delete">Delete</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_njportfolio.plugin.title">njs Portfolio Management</label>
+			<label index="label.trade">Branche</label>
+			<label index="message.headline.index">Übersicht</label>
+			<label index="message.headline.create">Nachricht schreiben</label>
+			<label index="message.headline.show">Nachricht lesen</label>
+			<label index="message.writeMessage">Nachricht schreiben</label>
+			<label index="message.inbox">Eingang</label>
+			<label index="message.outbox">Gesendet</label>
+			<label index="message.archive">Archiv</label>
+			<label index="message.show.label.from">Von</label>
+			<label index="message.show.label.sent">Gesendet</label>
+			<label index="message.show.label.subject">Betreff</label>
+			<label index="message.general.button.reply">Antworten</label>
+			<label index="message.general.button.delete">Löschen</label>
+		</languageKey>
+	</data>
+</T3locallang>

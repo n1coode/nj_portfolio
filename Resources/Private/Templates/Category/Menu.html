@@ -1,0 +1,17 @@
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:wrapExtension settings="{ext}">
+	<f:if condition="{categories}">
+		<f:then>
+			<ul class="clearfix">
+				<f:for each="{categories}" as="category" iteration="iterator">
+					<li>{category.title}</li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else>
+			No Categories found.
+		</f:else>
+	</f:if>
+	
+</f:wrapExtension>

@@ -1,0 +1,8 @@
+{namespace njVH=N1coode\NjPortfolio\ViewHelpers}
+<div id="tx_portfolio_ajax_work_random" class="tx_njportfolio ajax work random clearfix" style="width:{arguments.imageWidth}px; height:{arguments.imageHeight}px;">
+	<f:for each="{images}" as="image" iteration="imageIterator">
+		<div id="tx_portfolio_ajax_work_random_image_{image.uid}" class="image{f:if(condition:'{imageIterator.isFirst}',then:' first',else:'')}{f:if(condition:'{imageIterator.isLast}',then:' last',else:'')}" style="z-index:{njVH:ImageIndex(iterator:'{imageIterator.index}')};">
+			<f:image src="{image.uid}" treatIdAsReference="1" alt="" width="{arguments.imageWidth}" height="{arguments.imageHeight}c" />
+		</div>
+	</f:for>
+</div>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-11-19" product-name="tx_njportfolio">
+		<header/>
+		<body>
+			<trans-unit id="flexform.controller.category.list" xml:space="preserve">
+				<target>Kategorie &#171; Liste &#187;</target>
+			</trans-unit>
+			<trans-unit id="flexform.controller.category.menu" xml:space="preserve">
+				<target>Kategorie &#171; Menu &#187;</target>
+			</trans-unit>
+			<trans-unit id="flexform.controller.header.index" xml:space="preserve">
+				<target>Header &#171; Index &#187;</target>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.digest" xml:space="preserve">
+				<target>Arbeiten &#171; Übersicht &#187;</target>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.focusClient" xml:space="preserve">
+				<target>Arbeiten &#171; Detailansicht (Klient) &#187;</target>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.highlights" xml:space="preserve">
+				<target>Arbeiten &#171; Highlights &#187;</target>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.list" xml:space="preserve">
+				<target>Arbeiten &#171; Liste &#187;</target>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.selection" xml:space="preserve">
+				<target>Arbeiten &#171; Auswahlmenu &#187;</target>
+			</trans-unit>
+			<trans-unit id="label.general.description" xml:space="preserve">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="label.general.showDescription" xml:space="preserve">
+				<target>Beschreibung anzeigen</target>
+			</trans-unit>
+			<trans-unit id="label.model.client.cdColorBack" xml:space="preserve">
+				<target>Corporate-Design - Farbe &#171; Hintergrund &#187; </target>
+			</trans-unit>
+			<trans-unit id="label.model.client.cdColorFront" xml:space="preserve">
+				<target>Corporate-Design - Farbe &#171; Vordergrund &#187; </target>
+			</trans-unit>
+			<trans-unit id="label.model.client.trade" xml:space="preserve">
+				<target>Branche</target>
+			</trans-unit>
+			<trans-unit id="label.model.header.version.cityLife" xml:space="preserve">
+				<target>Stadtleben (SVG)</target>
+			</trans-unit>
+			<trans-unit id="label.model.portfolio.work" xml:space="preserve">
+				<target>Arbeit</target>
+			</trans-unit>
+			<trans-unit id="label.model.work.conclusion" xml:space="preserve">
+				<target>Abschlussbemerkung</target>
+			</trans-unit>
+			<trans-unit id="label.model.work.creationYear" xml:space="preserve">
+				<target>Erstellungsjahr</target>
+			</trans-unit>
+			<trans-unit id="label.model.work.digest.img.height.fixed" xml:space="preserve">
+				<target>Feste Höhe für die Bilder verwenden</target>
+			</trans-unit>
+			<trans-unit id="label.model.work.highlight" xml:space="preserve">
+				<target>Arbeit hervorheben</target>
+			</trans-unit>
+			<trans-unit id="label.model.work.intro" xml:space="preserve">
+				<target>Einleitung</target>
+			</trans-unit>
+			<trans-unit id="label.model.work.showConclusion" xml:space="preserve">
+				<target>Abschlussbemerkung anzeigen</target>
+			</trans-unit>
+			<trans-unit id="label.model.work.showIntro" xml:space="preserve">
+				<target>Einleitung anzeigen</target>
+			</trans-unit>
+			<trans-unit id="model.category" xml:space="preserve">
+				<target>Kategorie</target>
+			</trans-unit>
+			<trans-unit id="model.client" xml:space="preserve">
+				<target>Klient</target>
+			</trans-unit>
+			<trans-unit id="model.material" xml:space="preserve">
+				<target>Material</target>
+			</trans-unit>
+			<trans-unit id="model.portfolio" xml:space="preserve">
+				<target>Arbeitsmappe</target>
+			</trans-unit>
+			<trans-unit id="model.product" xml:space="preserve">
+				<target>Produkt</target>
+			</trans-unit>
+			<trans-unit id="model.trade" xml:space="preserve">
+				<target>Branche</target>
+			</trans-unit>
+			<trans-unit id="model.work" xml:space="preserve">
+				<target>Arbeit</target>
+			</trans-unit>
+			<trans-unit id="plugin.title" xml:space="preserve">
+				<target>njs Portfolio Management</target>
+			</trans-unit>
+			<trans-unit id="tab.model.client.logo" xml:space="preserve">
+				<target>Logo</target>
+			</trans-unit>
+			<trans-unit id="tab.model.client.scanCode" xml:space="preserve">
+				<target>QR-Code</target>
+			</trans-unit>
+			<trans-unit id="tab.model.portfolio.works" xml:space="preserve">
+				<target>Arbeiten</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,22 @@
+{namespace f=N1coode\NjCollection\ViewHelpers}
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+<f:render partial="Work/Selection" arguments="{_all}" /> 
+<f:wrapExtension settings="{ext}">
+	<f:if condition="{works}">
+		<f:then>
+			<div class="collection" data-list="{f:textTransform(text:render,action:'lcfirst')}">
+			<f:render partial="Works" arguments="{_all}" />
+			</div>
+		</f:then>
+		<f:else></f:else>
+	</f:if>
+	<f:render partial="AjaxLoader" arguments="{type:'ring',width:'250',height:'250'}" />
+</f:wrapExtension>
+<f:render partial="Settings" arguments="{ext:'{ext}'}" />
+<script type="text/javascript">
+	__njportfolio_work_digest = ".{ext.key}.{ext.domain}.{ext.action}";
+	__njportfolio_work_digest_collection = __njportfolio_work_digest + ' .collection';
+	__njportfolio_work_digest_focus = __njportfolio_work_digest + ' .focus';
+	__njportfolio_work_digest_grid = __njportfolio_work_digest + ' .grid';
+	__njportfolio_work_digest_grid_item = __njportfolio_work_digest_grid + ' .grid-item';
+</script>

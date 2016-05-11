@@ -1,0 +1,26 @@
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:alias map="{alternateAction:'selection'}">
+<f:wrapExtension settings="{ext}" alternateAction="{alternateAction}">
+	<f:if condition="{selection}">
+		<f:then>
+			<ul class="clearfix">
+				<f:for each="{selection}" as="item" iteration="iterator">
+					<li class="{f:if(condition:'{render}=={f:textTransform(text:item)}',then:'active',else:'inactive')}" data-show="{item}"><f:translate key="{ext.langFile}label.model.work.digest.selection.{item}" /></li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else></f:else>
+	</f:if>
+	<script type="text/javascript">
+		__njportfolio_work_selection = ".{ext.key}.{ext.domain}.{alternateAction}";
+		__njportfolio_work_selection_item = __njportfolio_work_selection + " LI";
+		__njportfolio_work_selection_categories = __njportfolio_work_selection + " .categories";
+		__njportfolio_work_selection_categories_item = __njportfolio_work_selection_categories + " LI";
+	</script> 
+</f:wrapExtension>
+</f:alias>
+<f:comment>
+	//TODO:
+	- Übersetzungen
+</f:comment>

@@ -1,0 +1,64 @@
+{namespace njcVH=N1coode\NjCollection\ViewHelpers}
+{namespace njVH=N1coode\NjPortfolio\ViewHelpers}
+<div class="{ext.key} {ext.domain} {ext.action}">
+	<div class="client">
+		<h2>{client.name}</h2>
+		<div class="info">
+			<f:if condition="{client.logo}">
+				<f:image src="{client.logo.uid}" treatIdAsReference="1" alt="" height="75" /><br/>
+			</f:if>
+			<f:if condition="{client.website}">
+				<f:link.external uri="{client.website}" defaultScheme="http" target="_blank">{client.website}</f:link.external>
+			</f:if>
+		</div>
+		<div class="trade"><f:translate key="label.trade" />: <f:render section="trades" arguments="{trades:'{client.trades}'}" /></div>
+	</div>
+	<div class="works">
+		<f:for each="{works}" as="work" iteration="worksIterator">
+			<div id="tx_njportfolio_work_focus_client_item_{work.uid}" class="item {f:if(condition:'{worksIterator.isEven}', then:'even',else:'odd')} {f:if(condition:'{work.showDescription}', then:'standard', else:' extended')} clearfix">
+				<div class="headline">
+					<f:if condition="{work.date}">
+						<div class="date">&mdash; <f:format.date format="Y">{work.date}</f:format.date> &mdash;</div>
+					</f:if>
+					<h3>{work.title}</h3>
+					<f:if condition="{work.categories}">
+						<div class="categories">
+							<ul>
+								<f:for each="{work.categories}" as="category" iteration="categoryIterator">
+									<li><a href="#">{category.title}</a></li>
+								</f:for>
+							</ul>
+						</div>
+					</f:if>
+				</div>
+				<f:render section="images" arguments="{work:'{work}'}" />
+			</div>
+		</f:for>
+	</div>
+</div>
+
+
+<f:comment>*** SECTIONS ***</f:comment>
+
+<f:section name="trades">
+	<f:for each="{trades}" as="trade" iteration="tradeIterator">{trade.title}<f:if condition="{tradeIterator.isLast}"><f:then></f:then><f:else>, </f:else></f:if></f:for>
+</f:section>
+
+<f:section name="images">
+	<div id="tx_njportfolio_work_focus_client_images_{work.uid}" class="images"<f:if condition="{work.images -> f:count()} > 1"><f:then> data-role="n1slide"</f:then><f:else></f:else></f:if>>
+		<f:for each="{work.images}" as="image" iteration="imageIterator">
+			<div id="tx_portfolio_work_focus_client_image_{image.uid}" class="image">
+				<f:alias map="{aImage: '{f:uri.image(src:image.uid, treatIdAsReference:1)}'}">
+					<f:if condition="{work.showDescription}">
+						<f:then>
+							<f:image src="{image.uid}" alt="" treatIdAsReference="1" width="620" height="{njcVH:ImageDimension(width:'620')}c" additionalAttributes="{data-zoom-image:'{aImage}'}" />
+						</f:then>
+						<f:else>
+							<f:image src="{image.uid}" alt="" treatIdAsReference="1" />
+						</f:else>
+					</f:if>
+				</f:alias>
+			</div>
+		</f:for>
+	</div>
+</f:section>

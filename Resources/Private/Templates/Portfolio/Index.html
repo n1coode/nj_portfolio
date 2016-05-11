@@ -1,0 +1,9 @@
+{namespace njportVH=N1coode\NjPortfolio\ViewHelpers}
+
+<f:if condition="{portfolio}">
+	<f:then>
+		<f:for each="{portfolio}" as="item" iteration="portfolioIterator">
+			<div><f:format.date format="Y">{item.date}</f:format.date> {item.title}</div>
+		</f:for>
+	</f:then>
+</f:if>

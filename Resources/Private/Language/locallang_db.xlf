@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-11-19" product-name="tx_njportfolio">
+		<header/>
+		<body>
+			<trans-unit id="flexform.controller.category.list" xml:space="preserve">
+				<source>Category &#171; List &#187;</source>
+			</trans-unit>
+			<trans-unit id="flexform.controller.category.menu" xml:space="preserve">
+				<source>Category &#171; Menu &#187;</source>
+			</trans-unit>
+			<trans-unit id="flexform.controller.header.index" xml:space="preserve">
+				<source>Header &#171; Index &#187;</source>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.digest" xml:space="preserve">
+				<source>Works &#171; Digest  &#187;</source>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.focusClient" xml:space="preserve">
+				<source>Works &#171; Focus view (client) &#187;</source>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.highlights" xml:space="preserve">
+				<source>Works &#171; Highlights &#187;</source>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.list" xml:space="preserve">
+				<source>Works &#171; List &#187;</source>
+			</trans-unit>
+			<trans-unit id="flexform.controller.work.selection" xml:space="preserve">
+				<source>Works &#171; Select menu &#187;</source>
+			</trans-unit>
+			<trans-unit id="label.general.description" xml:space="preserve">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="label.general.showDescription" xml:space="preserve">
+				<source>Show description</source>
+			</trans-unit>
+			<trans-unit id="label.model.client.cdColorBack" xml:space="preserve">
+				<source>Corporate design - color &#171; background &#187; </source>
+			</trans-unit>
+			<trans-unit id="label.model.client.cdColorFront" xml:space="preserve">
+				<source>Corporate design - color &#171; front &#187; </source>
+			</trans-unit>
+			<trans-unit id="label.model.client.trade" xml:space="preserve">
+				<source>Trade</source>
+			</trans-unit>
+			<trans-unit id="label.model.header.version.cityLife" xml:space="preserve">
+				<source>City life (SVG)</source>
+			</trans-unit>
+			<trans-unit id="label.model.portfolio.work" xml:space="preserve">
+				<source>Work</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.conclusion" xml:space="preserve">
+				<source>Conclusion</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.creationYear" xml:space="preserve">
+				<source>Creation year</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.digest.img.height.fixed" xml:space="preserve">
+				<source>Use a fixed height for the images</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.highlight" xml:space="preserve">
+				<source>Highlight</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.intro" xml:space="preserve">
+				<source>Introduction</source>
+			</trans-unit>
+			<trans-unit id="model.category" xml:space="preserve">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="model.client" xml:space="preserve">
+				<source>Client</source>
+			</trans-unit>
+			<trans-unit id="model.material" xml:space="preserve">
+				<source>Material</source>
+			</trans-unit>
+			<trans-unit id="model.portfolio" xml:space="preserve">
+				<source>Portfolio</source>
+			</trans-unit>
+			<trans-unit id="model.product" xml:space="preserve">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="model.trade" xml:space="preserve">
+				<source>Trade</source>
+			</trans-unit>
+			<trans-unit id="model.work" xml:space="preserve">
+				<source>Work</source>
+			</trans-unit>
+			<trans-unit id="plugin.title" xml:space="preserve">
+				<source>njs portfolio management</source>
+			</trans-unit>
+			<trans-unit id="tab.images" xml:space="preserve">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tab.model.client.logo" xml:space="preserve">
+				<source>Logo</source>
+			</trans-unit>
+			<trans-unit id="tab.model.client.scanCode" xml:space="preserve">
+				<source>Scan code</source>
+			</trans-unit>
+			<trans-unit id="tab.model.portfolio.works" xml:space="preserve">
+				<source>Works</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

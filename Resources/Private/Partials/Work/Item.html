@@ -1,0 +1,41 @@
+{namespace f=N1coode\NjCollection\ViewHelpers}
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+
+<f:switch expression="{render}">
+	<f:case value="Categories">
+		<div class="grid-item">
+			<div class="grid-item-content">
+				<div class="thumb imgfix" >
+					<f:render section="image" arguments="{image:work.previewImage,colWidth:colWidth}" />
+				</div>
+			</div>
+		</div>
+	</f:case>
+	<f:case value="Clients">
+		<div class="grid-item" data-client="{work.client.uid}" data-file="{work.work.uid}">
+			<div class="grid-item-content">
+				<div class="thumb imgfix" >
+					<div class="overlay" style="background-color:{f:if(condition:'{work.client.cdColorBack}',then:'{work.client.cdColorBack}',else:'#2A2A2A')};">
+						<div class="title"><h2 style="color:{f:if(condition:'{work.client.cdColorFront}',then:'{work.client.cdColorFront}',else:'#FFFFFF')};">{work.client.name}</h2></div>
+						<div class="icons">
+							<f:link.action pageUid="{settings.model.work.pid.client}" controller="Work" action="focusClient" arguments="{client:'{work.client}'}"><i class="fa fa-link"></i></f:link.action><i class="fa fa-eye"></i>
+						</div>
+					</div>
+					<f:render section="image" arguments="{image:work.work,colWidth:colWidth}" />
+				</div>
+			</div>
+		</div>
+	</f:case>
+	<f:case value="Products">
+
+	</f:case>
+	<f:case value="Trades">
+
+	</f:case>
+</f:switch>
+
+<f:section name="image">
+	<f:alias map="{f:ImageSize(src:'{image.uid}',treatIdAsReference:'TRUE',randomize:'TRUE',maxWidth:'{colWidth}')}">
+		<f:image src="{image.uid}" treatIdAsReference="1" width="{width}" height="{height}')}c" />
+	</f:alias>
+</f:section>

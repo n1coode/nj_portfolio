@@ -1,0 +1,42 @@
+{namespace f=N1coode\NjPortfolio\ViewHelpers}
+{namespace f=N1coode\NjCollection\ViewHelpers}
+<f:wrapExtension settings="{ext}">
+	<ul class="clearfix">
+		<li class="open">Klient</li>
+		<li class="closed">Branche</li>
+		<li class="closed" data-menu="[data-selection=categories]">Kategorie</li>
+		<li class="closed">Produkte</li>
+	</ul>
+	<f:if condition="{categories}">
+		<f:then>
+			<div class="categories" data-selection="categories">
+				<ul>
+					<f:for each="{categories}" as="item" iteration="categoryIterator">
+						<li id="tx_njportfolio-menuitem-{categoryIterator.index}" class="gs1of{category -> f:count()} closed" data-category="{item.uid}">
+							<f:if condition="{item.iconInclude}">
+								<f:then>
+									<div class="icon"><f:format.raw>{item.icon}</f:format.raw></div>
+									<span data-hover="{item.title}"><f:link.action action="list" controller="Portfolio" arguments="{category:item}"><f:if condition="{settings.showNumbers}"><f:menuNumber iterator="{categoryIterator.index}" /> </f:if>{item.title}</f:link.action></span>
+								</f:then>
+								<f:else>
+									<f:link.action action="list" controller="Portfolio" arguments="{category:item}"><f:if condition="{settings.showNumbers}"><f:menuNumber iterator="{categoryIterator.index}" /> </f:if>{item.title}</f:link.action>
+								</f:else>
+							</f:if>	
+						</li>
+					</f:for> 
+				</ul>
+			</div>
+		</f:then>
+		<f:else></f:else>
+	</f:if>
+	<script type="text/javascript">
+		__njportfolio_work_selection = ".{ext.key}.{ext.domain}.{ext.action}";
+		__njportfolio_work_selection_item = __njportfolio_work_selection + " LI";
+		__njportfolio_work_selection_categories = __njportfolio_work_selection + " .categories";
+		__njportfolio_work_selection_categories_item = __njportfolio_work_selection_categories + " LI";
+	</script> 
+</f:wrapExtension>
+<f:comment>
+	//TODO:
+	- Übersetzungen
+</f:comment>

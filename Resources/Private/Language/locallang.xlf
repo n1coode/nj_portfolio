@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-11-19" product-name="tx_njportfolio">
+		<header/>
+		<body>
+			<trans-unit id="label.model.work.digest.selection.categories" xml:space="preserve">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.digest.selection.clients" xml:space="preserve">
+				<source>Clients</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.digest.selection.products" xml:space="preserve">
+				<source>Products</source>
+			</trans-unit>
+			<trans-unit id="label.model.work.digest.selection.trades" xml:space="preserve">
+				<source>Trades</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

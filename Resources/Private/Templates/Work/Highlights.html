@@ -1,0 +1,34 @@
+{namespace njpVH=N1coode\NjPortfolio\ViewHelpers}
+{namespace njcVH=N1coode\NjCollection\ViewHelpers}
+<div class="{ext.key} {ext.domain} {ext.action}">
+	<f:if condition="{works}">
+		<f:then>
+			<ul class="collection">
+				<f:for each="{works}" as="work" iteration="iterator">
+					<f:if condition="{work.images}">
+						<li class="item" data-work="{work.uid}">
+							<div class="title"><h2>{work.title}</h2></div>
+							<div class="image">
+								<f:alias map="{random:'{njcVH:RandomNumber(maximum:\'{work.images->f:count()}\',isIterator:\'TRUE\')}'}">
+									<f:for each="{work.images}" as="image" iteration="imgIterator">
+										<f:if condition="{random}=={imgIterator.index}">
+											<f:image src="{image.uid}" treatIdAsReference="1"  />
+										</f:if>
+									</f:for>
+								</f:alias>
+							</div>
+						</li>
+					</f:if>
+				</f:for>
+			</ul>
+			<script type="text/javascript">
+				_njp_SEL_PORTFOLIO_WORK_HIGHLIGHTS = ".{ext.key}.{ext.domain}.{ext.action}";
+				_njp_SEL_PORTFOLIO_WORK_HIGHLIGHTS_COLLECTION = ".{ext.key}.{ext.domain}.{ext.action} .collection";
+				_njp_SEL_PORTFOLIO_WORK_HIGHLIGHTS_ITEM = ".{ext.key}.{ext.domain}.{ext.action} .collection .item";
+			</script>
+		</f:then>
+		<f:else>
+			Keine Highlights gefunden.
+		</f:else>
+	</f:if>
+</div>
